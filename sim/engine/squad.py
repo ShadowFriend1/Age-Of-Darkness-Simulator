@@ -1,5 +1,8 @@
 # TODO: finish squad
+
 import numpy as np
+
+from dice import roll_d6
 
 
 class squad:

@@ -2,13 +2,17 @@ import numpy as np
 
 
 class unit:
-    def __init__(self, stats, wargear, rules, position=None):
+    def __init__(self, stats, wargear, rules, unit_types, height, base_size=None, position=None, footprint=None):
         if position is None:
             position = [0, 0, 0]
         self.stats = stats
         self.wargear = wargear
         self.rules = rules
+        self.unit_types = unit_types
+        self.height = height
+        self.base_size = base_size
         self.position = np.array(position)
+        self.footprint = footprint
 
     def move(self, move):
         self.position += move
